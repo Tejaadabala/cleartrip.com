@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleartrip Replica</title>
+  <link rel="stylesheet" href="cleartrip.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="left">
+      <svg width="107" height="24" viewBox="0 0 310 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M249.469 16.3906C243.189 16.3906 240.039 19.1706 240.039 25.4606V49.1506H247.469V25.8206C247.469 23.7506 248.399 22.7506 250.539 22.7506H257.039V16.3906H249.469V16.3906Z" fill="#FF4F17"></path><path d="M264.891 1.59961C262.461 1.59961 260.461 3.59961 260.461 6.09961C260.461 8.59961 262.461 10.5296 264.891 10.5296C267.321 10.5296 269.391 8.52961 269.391 6.09961C269.391 3.66961 267.391 1.59961 264.891 1.59961Z" fill="#FF4F17"></path><path d="M268.61 16.2402H261.25V49.0902H268.61V16.2402Z" fill="#FF4F17"></path><path d="M121.289 42.8804C119.149 42.8804 118.219 42.3104 118.219 40.1704V1.65039H110.789V40.1704C110.789 46.6704 114.429 49.2404 120.139 49.2404H124.069V42.8804H121.289V42.8804Z" fill="#FF4F17"></path><path d="M209.119 16.2695C202.839 16.2695 199.689 19.0495 199.689 25.3395V49.1195H207.119V25.6995C207.119 23.6295 208.049 22.6295 210.189 22.6295H216.689V16.2695H209.119Z" fill="#FF4F17"></path><path d="M228.33 16.2998V8.08984H220.9V40.0798C220.9 46.2898 224.11 49.1498 230.33 49.1498H235.9V42.7898H231.4C229.4 42.7898 228.33 42.0798 228.33 40.0798V22.6598H235.9V16.2998H228.33V16.2998Z" fill="#FF4F17"></path><path d="M274.82 16.5006V63.3706H282.25V46.3006C284.91 48.1406 288.13 49.2306 291.6 49.2306C300.67 49.2306 308.02 41.8806 308.02 32.8106C308.02 23.7406 300.67 16.3906 291.6 16.3906C288.12 16.3906 284.9 17.4806 282.25 19.3206V16.5006H274.82V16.5006ZM282.25 32.8106C282.25 27.6406 286.44 23.4606 291.6 23.4606C296.76 23.4606 300.95 27.6506 300.95 32.8106C300.95 37.9706 296.76 42.1606 291.6 42.1606C286.44 42.1606 282.25 37.9706 282.25 32.8106V32.8106Z" fill="#FF4F17"></path><path d="M156.92 32.1006C156.92 22.1006 150.21 16.3906 141.42 16.3906C131.57 16.3906 125.5 23.2506 125.5 32.7406C125.5 42.2306 132.21 49.2406 141.57 49.2406C149.85 49.2406 154.21 45.5306 156.28 39.3906H148.28C147.07 41.7506 144.78 42.8206 141.42 42.8206C136.99 42.8206 133.35 40.0406 133.07 35.0406H156.78C156.92 33.4706 156.92 32.7506 156.92 32.1106V32.1006ZM133.14 29.7406C133.78 25.3806 136.85 22.7406 141.64 22.7406C146.43 22.7406 149.07 25.2406 149.49 29.7406H133.14Z" fill="#FF4F17"></path><path d="M98.8005 37.9506C97.5905 41.3806 95.3005 42.8106 91.8705 42.8106C86.2305 42.8106 83.8005 38.3806 83.8005 32.7406C83.8005 27.1006 86.5805 22.7406 92.0105 22.7406C95.4405 22.7406 97.7205 24.5306 98.7905 27.6006H106.72C104.86 20.1006 99.2905 16.3906 91.8705 16.3906C81.8705 16.3906 76.2305 23.5306 76.2305 32.7406C76.2305 42.7406 82.8705 49.2406 91.8705 49.2406C100.87 49.2406 105.22 44.1706 106.72 37.9606H98.7905L98.8005 37.9506Z" fill="#FF4F17"></path><path d="M56.6095 17.7393C44.1095 26.8793 33.3295 38.8793 23.6895 48.9493C22.9795 49.6593 22.0495 50.1593 21.0495 50.1593C19.8395 50.1593 18.9095 49.4493 18.0495 48.1593C15.5495 44.4493 11.7695 35.4493 10.0495 31.5193C8.68954 28.3093 9.40954 25.6593 12.6195 24.3093C15.8295 23.0193 19.3995 22.8093 20.2595 26.4493C20.2595 26.4493 21.8995 32.8093 22.3995 34.6593C32.3295 25.4493 44.5395 15.6693 54.8895 9.66929C52.3195 4.80929 47.2495 1.5293 41.4695 1.5293H16.9795C8.54954 1.5293 1.76953 8.30929 1.76953 16.6693V41.2293C1.76953 49.5793 8.54954 56.3693 16.9795 56.3693H41.4695C49.8195 56.3693 56.6095 49.5893 56.6095 41.2293V17.7393V17.7393Z" fill="#FF4F17"></path><path d="M186.059 16.5006V19.3206C183.399 17.4806 180.179 16.3906 176.709 16.3906C167.639 16.3906 160.289 23.7406 160.289 32.8106C160.289 41.8806 167.639 49.2306 176.709 49.2306C180.189 49.2306 183.409 48.1406 186.059 46.3006V49.0906H193.489V16.5006H186.059ZM176.709 42.1606C171.539 42.1606 167.359 37.9706 167.359 32.8106C167.359 27.6506 171.549 23.4606 176.709 23.4606C181.869 23.4606 186.059 27.6506 186.059 32.8106C186.059 37.9706 181.869 42.1606 176.709 42.1606Z" fill="#FF4F17" alt="Cleartrip" class="logo"></path></svg>
+      <span class="flipkart">A <b>Flipkart</b> Company</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3447 2.56856C11.7207 2.24235 12.2793 2.24235 12.6553 2.56856L13.8066 3.56738C14.0386 3.76866 14.3502 3.85216 14.6518 3.79385L16.1482 3.50447C16.6369 3.40996 17.1207 3.6893 17.2833 4.1598L17.7809 5.60042C17.8811 5.89074 18.1093 6.11887 18.3996 6.21915L19.8402 6.71675C20.3107 6.87926 20.59 7.36309 20.4955 7.85182L20.2062 9.34823C20.1478 9.64979 20.2313 9.96142 20.4326 10.1934L21.4314 11.3447C21.7576 11.7207 21.7576 12.2793 21.4314 12.6553L20.4326 13.8066C20.2313 14.0386 20.1478 14.3502 20.2062 14.6518L20.4955 16.1482C20.59 16.6369 20.3107 17.1207 19.8402 17.2833L18.3996 17.7809C18.1093 17.8811 17.8811 18.1093 17.7809 18.3996L17.2833 19.8402C17.1207 20.3107 16.6369 20.59 16.1482 20.4955L14.6518 20.2062C14.3502 20.1478 14.0386 20.2313 13.8066 20.4326L12.6553 21.4314C12.2793 21.7576 11.7207 21.7576 11.3447 21.4314L10.1934 20.4326C9.96142 20.2313 9.64979 20.1478 9.34823 20.2062L7.85182 20.4955C7.36309 20.59 6.87926 20.3107 6.71675 19.8402L6.21915 18.3996C6.11887 18.1093 5.89074 17.8811 5.60042 17.7809L4.1598 17.2833C3.6893 17.1207 3.40996 16.6369 3.50447 16.1482L3.79385 14.6518C3.85216 14.3502 3.76866 14.0386 3.56738 13.8066L2.56856 12.6553C2.24235 12.2793 2.24235 11.7207 2.56856 11.3447L3.56738 10.1934C3.76866 9.96142 3.85216 9.64979 3.79385 9.34823L3.50447 7.85182C3.40996 7.36309 3.6893 6.87926 4.1598 6.71675L5.60042 6.21915C5.89074 6.11887 6.11887 5.89074 6.21915 5.60042L6.71675 4.1598C6.87926 3.6893 7.36309 3.40996 7.85182 3.50447L9.34823 3.79385C9.64979 3.85216 9.96142 3.76866 10.1934 3.56738L11.3447 2.56856Z" stroke="#1A1A1A"></path><path d="M16 8L8 16" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9.04761 9.16211H9.07577" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.0476 15.1621H15.0758" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Offers</a>
+      <a href="#"><i class="bi bi-briefcase"></i>Business</a>
+      <a href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.3312 10.869C17.2214 10.943 17.0779 10.9677 16.9513 10.9266V10.9101C16.2423 10.9266 15.6261 11.6502 15.6261 12.5219C15.6261 13.3936 16.2338 14.1173 16.9851 14.1173C17.1033 14.109 17.2468 14.1501 17.3312 14.2242C17.424 14.2982 17.5 14.4051 17.5 14.5202V16.6007C17.5 17.3244 16.926 17.9165 16.2254 17.9165H3.77462C3.074 17.9165 2.5 17.3244 2.5 16.6007V14.5613C2.5 14.438 2.55064 14.3146 2.65194 14.2406C2.74479 14.1584 2.87141 14.1337 2.99803 14.1584H3.01491C3.79994 14.1584 4.4077 13.4512 4.4077 12.5713C4.4077 11.6914 3.7915 10.9759 3.04024 10.9759C2.91362 11.0088 2.77012 10.9759 2.66882 10.9019C2.56753 10.8197 2.5 10.7045 2.5 10.5812V8.57465C2.5 8.0648 2.79544 7.62074 3.20906 7.40693C3.23438 7.39049 3.29347 7.34936 3.29347 7.34936L12.9924 3.02382C13.7605 2.72778 14.6215 3.06495 14.9339 3.78039L16.2507 7.16845C16.2507 7.16845 16.2676 7.24244 16.2676 7.28356C16.9513 7.30823 17.5 7.8839 17.5 8.59111V10.5401C17.5 10.6716 17.4409 10.795 17.3312 10.869ZM14.1488 4.06822C14.0222 3.78039 13.6508 3.64057 13.3216 3.76393L5.50506 7.25889H15.3897L14.1488 4.06822ZM16.6559 16.6172V14.9396C15.6007 14.7505 14.7904 13.7554 14.7904 12.5466C14.7904 11.3377 15.6007 10.3345 16.6559 10.1536V8.59111C16.6559 8.31974 16.4617 8.0977 16.2254 8.0977H3.77462C3.53826 8.0977 3.34412 8.32796 3.34412 8.59111V10.1947C4.42459 10.3509 5.25182 11.3706 5.25182 12.5877C5.25182 13.8048 4.41615 14.8163 3.34412 14.9807V16.6172C3.34412 16.8886 3.53826 17.1106 3.77462 17.1106H16.2254C16.4617 17.1106 16.6559 16.8886 16.6559 16.6172ZM9.73411 13.7801H7.48875C7.25239 13.7801 7.06669 13.961 7.06669 14.1913C7.06669 14.4215 7.25239 14.6025 7.48875 14.6025H9.73411C9.97046 14.6025 10.1562 14.4215 10.1562 14.1913C10.1562 13.961 9.97046 13.7801 9.73411 13.7801ZM12.4184 10.6058H7.49718C7.26083 10.6058 7.07512 10.7868 7.07512 11.017C7.07512 11.2473 7.26083 11.4282 7.49718 11.4282H12.4184C12.6548 11.4282 12.8405 11.2473 12.8405 11.017C12.8405 10.7868 12.6548 10.6058 12.4184 10.6058Z" fill="#1A1A1A"></path></svg>My Trips</a>
+      <a href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.58333 14.1648C8.66667 14.1648 7.91667 14.9152 7.91667 15.8324C7.91667 16.7496 8.66667 17.5 9.58333 17.5H10.4167C11.2 17.5 11.8583 16.958 12.0333 16.2326C13.2833 16.0909 14.325 15.2654 14.7667 14.1398C14.8417 14.1648 14.9167 14.1732 15 14.1732C16.3833 14.1732 17.5 13.0559 17.5 11.6718V9.58727C17.5 8.20317 16.3833 7.08588 15 7.08588H14.975C14.9167 6.49389 14.7333 5.56003 14.2083 4.68455C13.5083 3.52557 12.2333 2.5 10 2.5C7.76667 2.5 6.48333 3.52557 5.79167 4.68455C5.26667 5.56003 5.08333 6.49389 5.025 7.08588H5C3.61667 7.08588 2.5 8.20317 2.5 9.58727V11.6718C2.5 13.0559 3.61667 14.1732 5 14.1732C5.45833 14.1732 5.83333 13.7979 5.83333 13.3394V7.50278C5.83333 7.12757 5.93333 6.06865 6.5 5.10978C7.05 4.18427 8.06667 3.3338 10 3.3338C11.9333 3.3338 12.9417 4.18427 13.5 5.10978C14.075 6.06031 14.1667 7.12757 14.1667 7.50278V12.9225C14.1667 14.1815 13.2333 15.2237 12.025 15.3988C11.8333 14.6901 11.1833 14.1732 10.4167 14.1732H9.58333V14.1648ZM11.25 15.8324C11.25 15.3738 10.875 14.9986 10.4167 14.9986H9.58333C9.125 14.9986 8.75 15.3738 8.75 15.8324C8.75 16.291 9.125 16.6662 9.58333 16.6662H10.4167C10.875 16.6662 11.25 16.291 11.25 15.8324ZM15 13.331V7.91134C15.9167 7.91134 16.6667 8.66176 16.6667 9.57893V11.6634C16.6667 12.5806 15.9167 13.331 15 13.331ZM5 13.331V7.91134C4.08333 7.91134 3.33333 8.66176 3.33333 9.57893V11.6634C3.33333 12.5806 4.08333 13.331 5 13.331Z" fill="#1A1A1A"></path></svg>Support</a>
+      <button class="login-btn">Log in</button>
+    </nav>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active">
+      <img src="https://rukmini-ct.flixcart.com/f_auto,w_32,h_32,dpr_4/offermgmt-prod/offermgmt/images/banner/Navbar_Flights.png?cache=true" alt="">Flights
+    </button>
+    <button class="tab">
+      <img src="https://rukmini-ct.flixcart.com/f_auto,w_32,h_32,dpr_4/offermgmt-prod/offermgmt/images/banner/Navbar_Hotels.png?cache=true" alt="">Hotels
+    </button>
+    <button class="tab">
+      <img src="https://rukmini-ct.flixcart.com/f_auto,w_32,h_32,dpr_4/offermgmt-prod/offermgmt/images/banner/Navbar_Buses.png?cache=true" alt="">Buses
+    </button>
+    <button class="tab">
+      <img src="https://rukmini-ct.flixcart.com/f_auto,w_32,h_32,dpr_4/offermgmt-prod/offermgmt/images/banner/Navbar_Packages.png?cache=true" alt="">Packages
+    </button>
+  </div>
+
+  <!-- Main Container -->
+  <main class="main">
+    <!-- Left (Search Flights) -->
+    <section class="left-section">
+      <h1>Search flights</h1>
+      <p class="subtext">Enjoy hassle free flight ticket bookings at lowest airfare</p>
+      <div class="flight-box">
+        <div class="row trip-type">
+          <div class="top-options">
+            <div class="option-item">
+                <i class="bi bi-arrow-right"></i> One way 
+                <i class="bi bi-chevron-down small-icon"></i>
+            </div>
+
+            <div class="option-item">
+                <i class="bi bi-person"></i> 1 Adult, Economy
+                <i class="bi bi-chevron-down small-icon"></i>
+            </div>
+        </div>
+          
+        </div>
+        <svg class="svgone" xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="#808080" viewBox="0 0 20 17"><path d="M1.376 16.498v-1h17v1h-17zm1.575-5.075L.676 7.498l.85-.2 1.8 1.55 5.4-1.45-4.05-6.85L5.75.223l6.85 6.125 5.225-1.4c.383-.1.73-.03 1.038.212.308.242.462.554.462.938 0 .266-.075.5-.225.7-.15.2-.35.333-.6.4L2.95 11.423z"></path></svg>
+        <svg class="svgtwo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32" class="c-pointer"><rect width="32" height="32" fill="#fff" rx="16"></rect><g stroke="#3366CC" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" clip-path="url(#clip0_160_1650)"><path d="M24.167 14.833H7.833M7.833 14.833L13.667 9M7.833 18.334h16.334M24.167 18.333l-5.834 5.834"></path><circle cx="16" cy="16" r="13.375"></circle></g><defs><clipPath id="clip0_160_1650"><path fill="#fff" d="M0 0H28V28H0z" transform="translate(2 2)"></path></clipPath></defs></svg>
+        <svg class="svgthree" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#808080" viewBox="0 0 24 24"><mask id="mask0_160_1644" style="mask-type:alpha" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse"><path fill="#808080" d="M0 0H24V24H0z"></path></mask><g mask="url(#mask0_160_1644)"><path d="M3.5 20.5v-1h17v1h-17zm15.475-5.1L3.5 11.125V6.7l.8.225L5 9.05l5.5 1.55V2.65l1.125.275 2.75 8.75 5.25 1.475c.267.067.48.209.638.425.158.217.237.459.237.725 0 .384-.162.692-.487.925-.325.234-.671.292-1.038.175z"></path></g></svg>
+        <div class="row">
+          <input class="one" type="text" placeholder="       Where from?" > 
+          <input class="two" type="text" placeholder="       Where to?">
+        </div>
+
+        <div class="row">
+          <input type="date">
+          <input type="date" placeholder="Return">
+        </div>
+
+        <div class="fare-options">
+          <button>Senior citizen fare</button>
+          <button>Student fare</button>
+          <button>Armed forces fare</button>
+        </div>
+        <div class="buttons">
+          <div class="savings-button-container">
+    <div class="checkmark-box">
+        &#10003;
+    </div>
+    <div class="text-content">
+        <div class="main-text">
+            Unlock 10% extra savings
+            <span class="new-tag">NEW</span>
+        </div>
+        <div class="sub-text">Cleartrip for Work</div>
+    </div>
+</div>
+        <button class="search-btn">Search Flights</button>
+      </div>
+        </div>
+    </section>
+
+    <!-- Right (Offers) -->
+    <aside class="right-section">
+      <div class="ad">
+        <img src="https://rukmini-ct.flixcart.com/f_auto,q_auto,w_260,h_205,dpr_2/offermgmt-prod/offermgmt/images/banner/RR_CTFLASH_F_0611.jpg" alt="Helmet offer">
+      </div>
+
+      <div class="offers-box">
+        <div class="offer-header">
+          <h3>More offers</h3>
+          <a href="#">View all</a>
+        </div>
+        <div class="offer-card">
+          <h4>New Route Alert!</h4>
+          <p>Fly from Mumbai & Delhi to Athens With IndiGo <br> Hurry, Book Now! <br><a href="">Know more</a></p>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <div class="offer-banner">
+  <div class="offer-text">
+    <h3>Flexible flight bookings with <span class="star">★</span><span class="brand">ClearChoice</span><span class="highlight">Max</span></h3>
+    <p>Free cancellation or free date change starting from ₹499. T&C apply.</p>
+  </div>
+  <div class="offer-actions">
+    <button class="learn-btn">Learn more</button>
+    <span class="close-btn">×</span>
+  </div>
+  </div>
+  <div class="card-grid">
+        <div class="card card-1">
+            <!-- <div class="badge">HDFCCC</div>
+            <div class="content">
+                <h2>Up to 12% off</h2>
+                <p>on flights with HDFC Bank Credit Cards.</p>
+                <div class="logo">HDFC BANK LOGO</div>
+            </div> -->
+        </div>
+
+        <div class="card card-2">
+            <!-- <div class="badge">CTBUMPER</div>
+            <div class="content">
+                <h2>Up to 25% off</h2>
+                <p>on Flights</p>
+                <p class="small">(Applicable with all payment modes)</p>
+            </div> -->
+        </div>
+        
+        <div class="card card-3">
+            <!-- <div class="badge">AXISEMI</div>
+            <div class="content">
+                <h2>Up to 12% off</h2>
+                <p>on flights with Axis Bank Credit Card EMI.</p>
+                <div class="logo">AXIS BANK LOGO</div>
+            </div> -->
+        </div>
+
+        <div class="card card-4">
+            <!-- <div class="badge">HDFCEMI</div>
+            <div class="content">
+                <h2>Up to ₹5000 off</h2>
+                <p>on flights with HDFC Bank Credit Card EMIs.</p>
+                <div class="logo">HDFC BANK LOGO</div>
+            </div> -->
+        </div>
+        
+        <div class="card card-5">
+            <!-- <div class="badge">INDIGOSPL</div>
+            <div class="content">
+                <h2>Fly to Athens with Indigo</h2>
+                <p>Up to ₹6000 off on International Flights</p>
+                <div class="logo">INDIGO LOGO</div>
+            </div> -->
+        </div>
+
+        <div class="card card-6">
+            <!-- <div class="badge">CTMHSPL</div>
+            <div class="content">
+                <h2>Up to 25% off</h2>
+                <p>on flights to Bali & Indonesia</p>
+                <div class="logo">MALAYSIA AIRLINES LOGO</div>
+            </div> -->
+        </div>
+
+        <div class="card card-7">
+            <!-- <div class="badge">FLY TO EUROPE WITH INDIGO</div>
+            <div class="content">
+                <h2>Up to 20% off</h2>
+                <p>on Flights to Copenhagen, Amsterdam or Manchester</p>
+                <div class="logo">INDIGO LOGO</div>
+            </div> -->
+        </div>
+
+        <div class="card card-8">
+            <!-- <div class="badge badge-red">AIRASIA OFFER</div>
+            <div class="content">
+                <h2>Flights from ₹15,774</h2>
+                <p>to Darwin, Perth, Melbourne, Sydney</p>
+                <div class="logo">AIRASIA LOGO</div>
+            </div> -->
+        </div>
+    </div>
+    <div class="qr-code">
+      <img src="https://rukmini-ct.flixcart.com/f_auto,q_auto,w_2952,h_741,dpr_2/offermgmt-prod/offermgmt/images/banner/bsb1_CTFIRST_1.jpg" alt="">
+    </div>
+    <section class="destinations-section">
+        <h2>Popular destinations</h2>
+        
+        <div class="destination-grid">
+            <div class="destination-card card-goa">
+                <div class="destination-info">
+                    <h3>Goa</h3>
+                    <p>3051 Properties</p>
+                </div>
+            </div>
+
+            <div class="destination-card card-delhi">
+                <div class="destination-info">
+                    <h3>Delhi</h3>
+                    <p>2436 Properties</p>
+                </div>
+            </div>
+            
+            <div class="destination-card card-bangalore">
+                <div class="destination-info">
+                    <h3>Bangalore</h3>
+                    <p>2500 Properties</p>
+                </div>
+            </div>
+            
+            <div class="destination-card card-jaipur">
+                <div class="destination-info">
+                    <h3>Jaipur</h3>
+                    <p>920 Properties</p>
+                </div>
+            </div>
+            
+            <div class="destination-card card-pattaya">
+                <div class="destination-info">
+                    <h3>Pattaya</h3>
+                    <p>1850 Properties</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h2>About Cleartrip</h2>
+        <p>
+            Launched in July 2006, <strong>Cleartrip Pvt Ltd</strong>, a Flipkart company, has emerged as India's fastest-growing online travel technology company. In April 2021, Flipkart acquired a majority stake in Cleartrip. Cleartrip recently emerged as the no. 2 OTA player as per a study by VIDEC. With an aggressive plan to emerge as a leading innovator in the industry, Cleartrip is on its way to building a differentiated value proposition for its customers looking for end-to-end travel solutions. With industry-first offerings including <a>ClearChoice Plus</a>, <a>ClearChoice Max</a> and <a>Cancel for No Reason!</a>, Cleartrip has a clear vision to provide innovative solutions in the OTA segment. Combining intuitive products with a customer-centric approach and a wide selection of flights, hotels, buses and holiday packages, Cleartrip brings a unique selling point to the market, offering its customers convenience, choice, competitive prices, and premium content.
+        </p>
+
+        <h2>How Does Cleartrip Help You Plan Your Travel?</h2>
+
+        <p>
+            <strong>Cleartrip</strong> offers a collection of everything you need for a perfect trip. All can be done simultaneously, from flights to taxis to hotel bookings. This is how planning flights and hotels with Cleartrip gives you a clear edge:-
+        </p>
+
+        <p>
+            <strong>ClearChoice Max:</strong> It offers free cancellation or rescheduling for domestic (up to 24 hours before departure) and international flights (up to 72 hours before departure).
+        </p>
+
+        <p>
+            <strong>ClearChoice Plus:</strong> Free date or airline change up to 12 hours (or 24 hours for Air India* and Vistara*) before departure.
+        </p>
+
+        <p>
+            <strong>Easy hotel cancellation:</strong> You can quickly cancel your hotel stay. There are no costs for hotel cancellations up to 24 hours before check-in at over 20,000 hotels.
+        </p>
+
+        <p>
+            <strong>Instant refund initiation:</strong> All flight and hotel cancellation refunds are processed immediately.
+        </p>
+
+        <p>
+            <strong>Medi-cancel refund:</strong> Cancel your domestic flight booking for sound medical reasons and receive up to INR 3500 against airline cancellation charges per person per segment.
+        </p>
+
+        <p>
+            <strong>International travel insurance:</strong> For only INR 89 per user daily, you can get stress-free coverage against a wide range of uncertainties for all foreign destinations.
+        </p>
+
+        <p>
+            <strong>Special fares for armed personnel, senior citizens, and student travellers:</strong> Cleartrip has introduced lower pricing on domestic flights for armed personnel, senior citizens, and students. Coupon codes provide further discounts.
+        </p>
+        <h2>Why Choose Cleartrip for Flight Booking?</h2>
+        <p>Cleartrip is a trusted travel booking platform known for its transparent pricing, reliable customer support, and seamless booking experience. Here’s why millions of travellers choose Cleartrip for booking flights:</p>
+        <ul>
+          <li><strong>Best Deals & Transparent Pricing</strong> - No hidden charges, just competitive fares to save money.</li>
+          <li><strong>Flexible Booking & Cancellations</strong> - Modify or cancel your booking with ease.</li>
+          <li><strong>Wide Airline Options </strong>- Compare flight ticket pricing from multiple carriers in one place.</li>
+          <li><strong>Seamless Booking Process</strong> - Quick search, secure payment, and instant confirmation.</li>
+          <li>24/7 Customer Support - Assistance anytime, anywhere for a smooth journey.</li>
+        </ul>
+        <h2>How to Book Flights on Cleartrip?</h2>
+        <p>Booking flights on Cleartrip is quick and easy. Follow these simple steps to secure your domestic or international flight tickets:</p>
+        <ul>
+          <li><strong>Enter Your Travel Details</strong> - Select your departure and arrival locations, travel dates, and the number of passengers.</li>
+          <li><strong>Compare Flight Options</strong> - Browse through available airlines, fares, and schedules.</li>
+          <li><strong>Select the Best Flight</strong> - Choose a flight that fits your budget and timing.</li>
+          <li><strong>Complete the Booking</strong> - Enter passenger details, apply any available offers, and make a secure payment.</li>
+          <li><strong>Receive Instant Confirmation</strong> - Get an e-ticket and travel details in your inbox.</li>
+        </ul>
+        <p>Whether you need to book domestic flights for a weekend getaway or book international flights for a vacation abroad, Cleartrip provides a smooth and convenient experience.</p>
+        <h2>Enjoy a Hassle-Free Travel Experience</h2>
+        <p>At Cleartrip, we go beyond just flight bookings. Our platform helps travellers with:</p>
+        <ul>
+          <li>Real-time flight status tracking</li>
+          <li>Secure payment and data protection</li>
+          <li>Comprehensive travel insurance options</li>
+          <li>Baggage allowance details and add-ons</li>
+          <li>Special assistance services for senior citizens and infants</li>
+        </ul>
+        <p>From budget flights to luxury travel, Cleartrip ensures a smooth, stress-free booking process, helping you save both time and money.</p>
+        <h2>FAQs: Flights, Hotels, Bus and Train Booking on Cleartrip</h2>
+        <h2>What services does Cleartrip offer?</h2>
+        <p>Cleartrip is dedicated to making travel easy, economical, and uncomplicated, from international to domestic flights, from early morning to late night flights, and from budget to luxury flights. Cleartrip allows you to book your flight with just a few clicks. Our features include:</p>
+        <ol>
+          <li>ClearChoice Max offers free cancellation or rescheduling for domestic and international flights.</li>
+          <li>ClearChoice Plus: Free date or airline change up to 12 hours before departure.</li>
+          <li>Medical reasons to cancel your domestic travel, and receive up to INR3500 compensation against airline cancellation charges per person per segment.</li>
+        </ol>
+        <h1>How do I create an account on Cleartrip?</h1>
+        <p>You can reach Cleartrip Customer Support and Phone Number. Contact us at +91 9595333333. We are here to assist you with your booking and rescheduling queries.</p>
+        <h2>How do I search for flights on Cleartrip?</h2>
+        <p>Booking a hotel online has never been easier than it is with Cleartrip.</p>
+          <ol>
+            <li>Click the 'hotels' tab on the site.</li>
+            <li>Enter the city/locality/landmark/hotel name in the search bar.
+            </li>
+            <li>Enter the check-in and check-out dates.</li>
+            <li>Choose the number of travellers and press enter.</li>
+          </ol>
+<p>You may also refine your hotel booking search results by utilising parameters such as price, star rating, traveller rating, facilities, and preferences such as hill-view or couple-friendly hotels. Cleartrip offers hotels for all types of stays. Cleartrip hotels are curated to give you the best value for your money.</p>
+<h2>Disclaimer</h2>
+<p>In addition to the above, the data presented here cannot be assumed reliable; instead, it may vary over time in response to changing demands.</p>
+    </section>
+    <footer class="cleartrip-footer">
+        <div class="footer-top-row">
+            <div class="logo-and-legal">
+                <div class="logo-area">
+                    <div class="logo-placeholder">
+                        <svg width="177" height="48" viewBox="0 0 177 48" fill="none" class="mr-10"><path d="M66.7936 45.5696H65.4542L68.4638 37.3184H69.9216L72.9312 45.5696H71.5918L69.2274 38.8171H69.1621L66.7936 45.5696ZM67.0182 42.3384H71.3631V43.3859H67.0182V42.3384Z" fill="#808080"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M87.0036 36.8748C87.079 36.985 87.1168 37.0951 87.1168 37.2053L86.0982 43.3737C86.0982 43.4471 86.0982 43.5022 86.0982 43.5389C86.0982 43.7592 86.1359 43.9061 86.2114 43.9795C86.268 44.0346 86.4377 44.0897 86.4943 44.0897C86.5698 44.0897 86.6452 44.1264 86.7207 44.1998C86.7961 44.31 86.8338 44.4201 86.8338 44.5303L86.7772 45.081C86.7772 45.2279 86.7395 45.3197 86.6641 45.3564C86.5886 45.3931 86.4943 45.4482 86.3811 45.5216C86.268 45.5216 85.985 45.6318 85.7587 45.6318C85.2306 45.6318 84.8156 45.5032 84.5138 45.2462C84.2497 45.0259 84.1177 44.6955 84.1177 44.2549C84.1177 44.108 84.1366 43.9611 84.1743 43.8143C84.1743 43.7592 85.2494 37.1502 85.2494 37.0951C85.2494 36.8748 85.4758 36.7096 85.6455 36.7096H86.6641C86.815 36.7096 86.9281 36.7647 87.0036 36.8748ZM90.229 39.2431C90.3044 39.3532 90.3421 39.4634 90.3421 39.5735L89.4368 45.1361C89.3802 45.3564 89.2104 45.4665 89.0407 45.4665H88.0221C87.8712 45.4665 87.7581 45.4298 87.6826 45.3564C87.6072 45.2462 87.5694 45.1361 87.5694 45.0259L88.4748 39.4634C88.5314 39.2431 88.7011 39.0778 88.9275 39.0778H89.8894C90.0403 39.0778 90.1535 39.1329 90.229 39.2431ZM88.8709 38.3619C88.72 38.215 88.6446 38.0131 88.6446 37.756C88.6446 37.4256 88.7577 37.1502 88.9841 36.9299C89.1727 36.7463 89.4745 36.6545 89.8894 36.6545C90.1912 36.6545 90.4176 36.7096 90.5685 36.8198C90.7194 36.9666 90.7948 37.1686 90.7948 37.4256C90.7948 37.756 90.7005 38.0314 90.5119 38.2517C90.3233 38.4353 90.0026 38.5271 89.5499 38.5271C89.2481 38.5271 89.0218 38.472 88.8709 38.3619ZM104.319 39.6286C104.206 39.9958 104.017 40.3996 103.753 40.8402C103.338 41.5011 102.923 42.0152 102.508 42.3823H102.451L103.47 44.9158C103.508 44.9525 103.527 45.0076 103.527 45.081C103.527 45.3013 103.3 45.4665 103.074 45.4665H101.999C101.829 45.4665 101.659 45.3564 101.603 45.2462L100.697 43.0432H100.075L99.7353 45.1361C99.6787 45.3564 99.509 45.4665 99.3392 45.4665H98.3207C98.1698 45.4665 98.0566 45.4298 97.9812 45.3564C97.9057 45.2462 97.868 45.1361 97.868 45.0259L99.1695 37.0951C99.2261 36.8748 99.3958 36.7096 99.5656 36.7096H100.584C100.735 36.7096 100.848 36.7647 100.924 36.8748C100.999 36.985 101.037 37.0951 101.037 37.2053L100.301 41.6664H100.358C100.81 41.5562 100.98 41.5011 101.037 41.5011L101.093 41.4461C101.32 41.2992 101.603 40.9687 101.942 40.4547C102.206 40.0508 102.376 39.702 102.451 39.4083C102.508 39.2431 102.678 39.0778 102.848 39.0778H103.923C104.092 39.0778 104.206 39.1329 104.262 39.2431C104.375 39.3532 104.375 39.5184 104.319 39.6286ZM120.785 39.2431C120.861 39.3532 120.879 39.4634 120.842 39.5735L120.729 40.1793C120.729 40.3996 120.502 40.5098 120.332 40.5098H119.427L118.974 43.2635C118.974 43.337 118.974 43.392 118.974 43.4288C118.974 43.7592 119.088 43.8694 119.144 43.8694C119.201 43.9795 119.314 43.9795 119.371 43.9795C119.408 43.9795 119.465 43.9795 119.54 43.9795C119.578 43.9795 119.616 43.9795 119.653 43.9795C119.823 43.9795 119.823 44.0346 119.88 44.0346C119.88 44.0346 119.899 44.0346 119.936 44.0346C119.974 44.0713 119.993 44.0897 119.993 44.0897C120.106 44.1998 120.163 44.31 120.163 44.4752L120.05 45.081C120.05 45.1912 119.993 45.3013 119.823 45.3564C119.823 45.3931 119.823 45.4115 119.823 45.4115C119.767 45.4115 119.71 45.4665 119.653 45.4665C119.597 45.4665 119.088 45.6318 118.748 45.6318C118.144 45.6318 117.711 45.5032 117.447 45.2462C117.145 44.9892 116.994 44.6037 116.994 44.0897C116.994 43.8694 117.013 43.6674 117.051 43.4838L117.503 40.5098H117.277C117.126 40.5098 117.013 40.4731 116.937 40.3996C116.862 40.2895 116.824 40.1793 116.824 40.0692L116.937 39.4634C116.994 39.2431 117.164 39.0778 117.333 39.0778H117.786L118.182 37.8111C118.239 37.6459 118.409 37.5357 118.578 37.5357H119.427C119.54 37.5357 119.635 37.5725 119.71 37.6459C119.785 37.756 119.823 37.8662 119.823 37.9763L119.653 39.0778H120.446C120.559 39.0778 120.672 39.1329 120.785 39.2431ZM96.9061 39.6837C97.2833 40.1243 97.4719 40.7301 97.4719 41.5011C97.4719 41.9784 97.3965 42.4558 97.2456 42.9331C97.0947 43.3737 96.8872 43.8143 96.6231 44.2549C96.3213 44.6588 95.9064 44.9892 95.3782 45.2462C94.8124 45.5032 94.1711 45.6318 93.4543 45.6318C93.1525 45.6318 92.7942 45.595 92.3792 45.5216H92.3226L92.266 46.2926L92.0397 47.6144C91.9831 47.8347 91.8134 48 91.6436 48H90.6251C90.4742 48 90.361 47.9449 90.2855 47.8347C90.2101 47.7246 90.1724 47.6144 90.1724 47.5043L91.5304 39.4634C91.5304 39.2431 91.7002 39.0778 91.9265 39.0778H92.6055C92.7187 39.0778 92.813 39.1329 92.8885 39.2431C92.9639 39.3165 93.0016 39.4083 93.0016 39.5184V40.2344L93.0582 40.1243C93.0582 40.1243 93.6807 39.3532 94.6426 39.0778C94.9067 39.0044 95.1708 38.9677 95.4348 38.9677C96.0761 38.9677 96.5665 39.2063 96.9061 39.6837ZM95.548 41.8316C95.548 41.4644 95.4726 41.1523 95.3217 40.8953C95.2085 40.6383 95.0199 40.5098 94.7558 40.5098C94.4917 40.5098 94.1899 40.675 93.8504 41.0055C93.5109 41.3359 93.2091 41.7398 92.9451 42.2171L92.6621 43.9795C92.9639 44.0529 93.3034 44.0897 93.6807 44.0897C94.322 44.0897 94.7935 43.851 95.0953 43.3737C95.3971 42.8964 95.548 42.3823 95.548 41.8316ZM116.315 39.1329C116.428 39.2431 116.485 39.3532 116.428 39.5184L116.258 40.5098C116.202 40.675 116.089 40.8402 115.919 40.8402C115.579 40.9137 115.24 41.0422 114.9 41.2258C114.485 41.4828 114.146 41.7949 113.882 42.162L113.429 45.1361C113.372 45.3564 113.203 45.4665 112.976 45.4665H111.958C111.845 45.4665 111.731 45.4298 111.618 45.3564C111.543 45.2462 111.524 45.1361 111.562 45.0259L112.467 39.4634C112.467 39.2431 112.637 39.0778 112.863 39.0778H113.542C113.655 39.0778 113.75 39.1329 113.825 39.2431C113.901 39.3165 113.938 39.4083 113.938 39.5184V40.3996L113.995 40.2895C113.995 40.2895 114.448 39.7938 114.787 39.5735C115.07 39.4083 115.466 39.1329 115.919 39.0228C116.089 38.9677 116.202 39.0228 116.315 39.1329ZM111.279 39.6837L110.373 45.1361C110.373 45.3564 110.147 45.4665 109.977 45.4665H109.298C109.185 45.4665 109.091 45.4298 109.015 45.3564C108.94 45.2829 108.902 45.1728 108.902 45.0259V44.365L108.846 44.4752C108.846 44.4752 108.563 44.7506 108.28 44.9709C107.827 45.3013 107.374 45.4665 107.318 45.4665C107.054 45.5767 106.771 45.6318 106.469 45.6318C105.828 45.6318 105.318 45.3931 104.941 44.9158C104.602 44.4385 104.432 43.8326 104.432 43.0983C104.432 42.6944 104.47 42.3089 104.545 41.9417C104.621 41.5746 104.771 41.2074 104.998 40.8402C105.186 40.4731 105.432 40.161 105.733 39.904C105.997 39.6102 106.375 39.3899 106.865 39.2431C107.318 39.0595 107.846 38.9677 108.449 38.9677C109.166 38.9677 109.996 39.0595 110.939 39.2431C111.166 39.2981 111.279 39.4634 111.279 39.6837ZM109.242 40.6199H109.185C108.921 40.5098 108.582 40.4547 108.167 40.4547C107.563 40.4547 107.11 40.6934 106.809 41.1707C106.507 41.648 106.356 42.1804 106.356 42.7679C106.356 43.135 106.412 43.4471 106.526 43.7041C106.676 43.9244 106.865 44.0346 107.091 44.0346C107.356 44.0346 107.676 43.8694 108.053 43.5389C108.393 43.2085 108.695 42.8229 108.959 42.3823L109.242 40.6199ZM83.7216 38.3619H80.3831L80.0436 40.5649H82.6465C82.7597 40.5649 82.854 40.6199 82.9294 40.7301C83.0426 40.8035 83.0803 40.9137 83.0426 41.0605L82.9294 41.7214C82.9294 41.9417 82.7031 42.0519 82.5333 42.0519H79.7606L79.2514 45.1361C79.2514 45.3564 79.0816 45.4665 78.8553 45.4665H77.7236C77.6104 45.4665 77.5161 45.4298 77.4406 45.3564C77.3652 45.2462 77.3275 45.1361 77.3275 45.0259L78.6289 37.0951C78.6289 36.8748 78.7987 36.7647 79.025 36.7647H83.8348C83.948 36.7647 84.0611 36.8014 84.1743 36.8748C84.2498 36.985 84.2686 37.0951 84.2309 37.2053L84.1177 37.9763C84.1177 38.1966 83.948 38.3619 83.7216 38.3619Z" fill="#808080"></path><path d="M132.227 40.0013H130.953C130.904 39.7327 130.812 39.4963 130.679 39.2922C130.546 39.088 130.382 38.9148 130.189 38.7724C129.996 38.6301 129.779 38.5227 129.54 38.4501C129.303 38.3776 129.051 38.3414 128.784 38.3414C128.302 38.3414 127.871 38.4609 127.49 38.6999C127.111 38.939 126.812 39.2895 126.591 39.7515C126.374 40.2135 126.265 40.7775 126.265 41.4436C126.265 42.1151 126.374 42.6818 126.591 43.1438C126.812 43.6058 127.113 43.955 127.494 44.1913C127.875 44.4277 128.304 44.5459 128.78 44.5459C129.044 44.5459 129.295 44.511 129.531 44.4411C129.771 44.3686 129.987 44.2625 130.181 44.1229C130.374 43.9832 130.537 43.8126 130.671 43.6112C130.807 43.407 130.901 43.1734 130.953 42.9101L132.227 42.9142C132.159 43.3198 132.027 43.6931 131.831 44.0342C131.637 44.3726 131.388 44.6654 131.083 44.9125C130.781 45.1569 130.435 45.3463 130.046 45.4806C129.657 45.6149 129.232 45.682 128.772 45.682C128.048 45.682 127.403 45.5128 126.836 45.1744C126.27 44.8333 125.824 44.3458 125.497 43.7119C125.173 43.078 125.011 42.3219 125.011 41.4436C125.011 40.5626 125.174 39.8065 125.501 39.1753C125.828 38.5415 126.274 38.0553 126.84 37.7169C127.407 37.3758 128.051 37.2052 128.772 37.2052C129.216 37.2052 129.629 37.2683 130.013 37.3946C130.4 37.5181 130.747 37.7008 131.055 37.9425C131.362 38.1815 131.617 38.4743 131.818 38.8208C132.02 39.1646 132.156 39.5581 132.227 40.0013Z" fill="#808080"></path><path d="M136.281 45.6941C135.693 45.6941 135.179 45.5612 134.741 45.2953C134.303 45.0294 133.963 44.6574 133.72 44.1793C133.478 43.7012 133.357 43.1425 133.357 42.5032C133.357 41.8613 133.478 41.2999 133.72 40.8191C133.963 40.3384 134.303 39.965 134.741 39.6991C135.179 39.4332 135.693 39.3002 136.281 39.3002C136.869 39.3002 137.382 39.4332 137.82 39.6991C138.258 39.965 138.599 40.3384 138.841 40.8191C139.083 41.2999 139.204 41.8613 139.204 42.5032C139.204 43.1425 139.083 43.7012 138.841 44.1793C138.599 44.6574 138.258 45.0294 137.82 45.2953C137.382 45.5612 136.869 45.6941 136.281 45.6941ZM136.285 44.6829C136.666 44.6829 136.982 44.5835 137.232 44.3847C137.483 44.186 137.668 43.9214 137.787 43.591C137.91 43.2607 137.971 42.8967 137.971 42.4992C137.971 42.1044 137.91 41.7418 137.787 41.4114C137.668 41.0783 137.483 40.8111 137.232 40.6096C136.982 40.4082 136.666 40.3075 136.285 40.3075C135.901 40.3075 135.582 40.4082 135.329 40.6096C135.079 40.8111 134.892 41.0783 134.77 41.4114C134.65 41.7418 134.59 42.1044 134.59 42.4992C134.59 42.8967 134.65 43.2607 134.77 43.591C134.892 43.9214 135.079 44.186 135.329 44.3847C135.582 44.5835 135.901 44.6829 136.285 44.6829Z" fill="#808080"></path><path d="M140.567 45.5692V39.3808H141.739V40.388H141.817C141.948 40.0469 142.161 39.781 142.458 39.5903C142.755 39.3969 143.11 39.3002 143.524 39.3002C143.943 39.3002 144.294 39.3969 144.577 39.5903C144.863 39.7837 145.074 40.0496 145.21 40.388H145.276C145.425 40.0577 145.664 39.7945 145.99 39.5984C146.317 39.3996 146.706 39.3002 147.158 39.3002C147.727 39.3002 148.191 39.4762 148.551 39.828C148.913 40.1799 149.094 40.7104 149.094 41.4194V45.5692H147.873V41.5323C147.873 41.1133 147.757 40.8097 147.526 40.6217C147.294 40.4337 147.018 40.3397 146.697 40.3397C146.299 40.3397 145.99 40.4606 145.77 40.7023C145.549 40.9413 145.439 41.2489 145.439 41.6249V45.5692H144.222V41.4557C144.222 41.12 144.116 40.85 143.904 40.6459C143.691 40.4418 143.415 40.3397 143.075 40.3397C142.843 40.3397 142.63 40.4001 142.434 40.521C142.24 40.6392 142.084 40.8044 141.964 41.0166C141.847 41.2287 141.788 41.4745 141.788 41.7538V45.5692H140.567Z" fill="#808080"></path><path d="M150.73 47.8899V39.3808H151.923V40.384H152.025C152.096 40.2551 152.198 40.106 152.331 39.9368C152.464 39.7676 152.65 39.6199 152.886 39.4936C153.123 39.3647 153.436 39.3002 153.826 39.3002C154.332 39.3002 154.784 39.4265 155.181 39.679C155.579 39.9314 155.891 40.2954 156.117 40.7708C156.345 41.2462 156.46 41.8183 156.46 42.4871C156.46 43.1559 156.347 43.7294 156.121 44.2075C155.895 44.6829 155.584 45.0495 155.19 45.3074C154.795 45.5625 154.344 45.6901 153.838 45.6901C153.457 45.6901 153.145 45.627 152.903 45.5007C152.663 45.3745 152.475 45.2268 152.339 45.0576C152.203 44.8883 152.098 44.7379 152.025 44.6063H151.951V47.8899H150.73ZM151.927 42.475C151.927 42.9101 151.991 43.2916 152.119 43.6192C152.247 43.9469 152.432 44.2034 152.674 44.3888C152.916 44.5714 153.213 44.6627 153.564 44.6627C153.929 44.6627 154.234 44.5674 154.479 44.3767C154.724 44.1833 154.909 43.9214 155.034 43.591C155.162 43.2607 155.226 42.8887 155.226 42.475C155.226 42.0668 155.164 41.7001 155.038 41.3751C154.916 41.0501 154.731 40.7936 154.483 40.6056C154.238 40.4176 153.932 40.3236 153.564 40.3236C153.21 40.3236 152.911 40.4136 152.666 40.5935C152.424 40.7735 152.24 41.0246 152.115 41.3469C151.989 41.6692 151.927 42.0453 151.927 42.475Z" fill="#808080"></path><path d="M159.653 45.7062C159.255 45.7062 158.896 45.6337 158.575 45.4887C158.254 45.3409 157.999 45.1274 157.811 44.8481C157.626 44.5687 157.534 44.2263 157.534 43.8207C157.534 43.4715 157.602 43.1841 157.738 42.9585C157.874 42.7329 158.058 42.5543 158.289 42.4226C158.52 42.291 158.779 42.1917 159.065 42.1245C159.351 42.0574 159.642 42.0063 159.939 41.9714C160.314 41.9284 160.619 41.8935 160.853 41.8667C161.088 41.8371 161.258 41.7901 161.364 41.7256C161.47 41.6612 161.523 41.5564 161.523 41.4114V41.3832C161.523 41.0313 161.422 40.7587 161.221 40.5653C161.022 40.3719 160.726 40.2752 160.331 40.2752C159.92 40.2752 159.596 40.3652 159.359 40.5452C159.125 40.7224 158.963 40.9199 158.873 41.1374L157.725 40.8796C157.862 40.5035 158.06 40.2 158.322 39.969C158.586 39.7354 158.889 39.5661 159.232 39.4614C159.575 39.354 159.936 39.3002 160.314 39.3002C160.565 39.3002 160.83 39.3298 161.111 39.3889C161.394 39.4453 161.658 39.55 161.903 39.7031C162.151 39.8562 162.353 40.0751 162.511 40.3598C162.669 40.6419 162.748 41.0085 162.748 41.4597V45.5692H161.556V44.7232H161.507C161.428 44.8789 161.309 45.032 161.152 45.1825C160.994 45.3329 160.791 45.4578 160.543 45.5571C160.295 45.6565 159.999 45.7062 159.653 45.7062ZM159.918 44.7393C160.256 44.7393 160.544 44.6735 160.784 44.5419C161.026 44.4102 161.21 44.2383 161.335 44.0262C161.463 43.8113 161.527 43.5816 161.527 43.3372V42.5395C161.484 42.5825 161.399 42.6228 161.274 42.6604C161.152 42.6953 161.011 42.7262 160.853 42.753C160.696 42.7772 160.542 42.8 160.392 42.8215C160.242 42.8403 160.117 42.8564 160.016 42.8699C159.779 42.8994 159.563 42.9491 159.367 43.0189C159.174 43.0888 159.019 43.1895 158.902 43.3211C158.787 43.45 158.73 43.6219 158.73 43.8368C158.73 44.1349 158.842 44.3606 159.065 44.5137C159.288 44.6641 159.573 44.7393 159.918 44.7393Z" fill="#808080"></path><path d="M165.595 41.8949V45.5692H164.375V39.3808H165.546V40.388H165.624C165.768 40.0604 165.994 39.7971 166.302 39.5984C166.612 39.3996 167.003 39.3002 167.474 39.3002C167.901 39.3002 168.276 39.3889 168.597 39.5661C168.918 39.7407 169.167 40.0013 169.344 40.3478C169.521 40.6942 169.61 41.1227 169.61 41.633V45.5692H168.389V41.778C168.389 41.3295 168.27 40.979 168.033 40.7265C167.797 40.4713 167.471 40.3437 167.057 40.3437C166.774 40.3437 166.522 40.4042 166.302 40.525C166.084 40.6459 165.911 40.8232 165.783 41.0568C165.658 41.2878 165.595 41.5672 165.595 41.8949Z" fill="#808080"></path><path d="M171.794 47.8899C171.612 47.8899 171.446 47.8751 171.296 47.8456C171.146 47.8187 171.035 47.7892 170.961 47.7569L171.255 46.7699C171.479 46.8289 171.677 46.8545 171.852 46.8464C172.026 46.8383 172.18 46.7739 172.313 46.653C172.449 46.5321 172.569 46.3347 172.672 46.0608L172.823 45.6498L170.528 39.3808H171.835L173.424 44.1833H173.489L175.078 39.3808H176.388L173.803 46.3952C173.684 46.7175 173.531 46.9901 173.346 47.213C173.161 47.4387 172.94 47.6079 172.685 47.7207C172.429 47.8335 172.132 47.8899 171.794 47.8899Z" fill="#808080"></path><path d="M31.5953 9.13613C24.3883 14.3246 18.1615 21.0921 12.6266 26.7316C12.223 27.1264 11.6464 27.4084 11.0699 27.4084C10.378 27.4084 9.85911 27.0136 9.34021 26.2805C7.89882 24.1938 5.76556 19.1182 4.72776 16.9188C3.97824 15.1141 4.38183 13.6478 6.22681 12.8583C8.07179 12.1251 10.1474 12.0123 10.6663 14.0426C10.6663 14.0426 11.5888 17.6519 11.8771 18.7234C17.585 13.4786 24.619 8.00821 30.6151 4.62446C29.1161 1.86106 26.2333 0 22.8893 0H8.76366C3.86293 0 0 3.83492 0 8.57217V22.3892C0 27.1264 3.86293 30.9613 8.76366 30.9613H22.8893C27.6747 30.9613 31.5953 27.1264 31.5953 22.3892V9.13613Z" fill="#808080"></path><path d="M142.813 8.40363C139.181 8.40363 137.336 9.98271 137.336 13.4793V26.8451H141.66V13.7048C141.66 12.5205 142.179 11.9566 143.39 11.9566H147.137V8.40363H142.813Z" fill="#808080"></path><path d="M151.692 0.0570679C150.308 0.0570679 149.155 1.18499 149.155 2.59488C149.155 3.94838 150.308 5.0763 151.692 5.0763C153.133 5.0763 154.286 3.94838 154.286 2.59488C154.286 1.18499 153.133 0.0570679 151.692 0.0570679Z" fill="#808080"></path><path d="M149.616 8.2901V26.8443H153.825V8.2901H149.616Z" fill="#808080"></path><path d="M68.8979 23.3486C67.6295 23.3486 67.1106 23.0102 67.1106 21.7695V0.0570679H62.8441V21.7695C62.8441 25.4352 64.9197 26.9015 68.206 26.9015H70.5123V23.3486H68.8979Z" fill="#808080"></path><path d="M119.521 8.34717C115.888 8.34717 114.101 9.86986 114.101 13.4228V26.845H118.368V13.6484C118.368 12.4641 118.944 11.9001 120.155 11.9001H123.902V8.34717H119.521Z" fill="#808080"></path><path d="M130.59 8.34547V3.72101H126.324V21.7677C126.324 25.2642 128.169 26.8433 131.743 26.8433H134.972V23.2904H132.378C131.224 23.2904 130.59 22.8956 130.59 21.7677V11.8984H134.972V8.34547H130.59Z" fill="#808080"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M161.665 8.46002V10.0391C163.222 9.02398 165.067 8.40363 167.085 8.40363C172.332 8.40363 176.54 12.5205 176.54 17.6525C176.54 22.7846 172.332 26.9015 167.085 26.9015C165.067 26.9015 163.222 26.2811 161.665 25.266V34.9097H157.399V8.46002H161.665ZM167.085 22.8974C170.025 22.8974 172.447 20.5851 172.447 17.6525C172.447 14.72 170.025 12.3513 167.085 12.3513C164.087 12.3513 161.665 14.72 161.665 17.6525C161.665 20.5851 164.087 22.8974 167.085 22.8974Z" fill="#808080"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M89.3667 18.8933H75.7023C75.8753 21.7131 77.9509 23.2921 80.4877 23.2921C82.448 23.2921 83.7741 22.6718 84.466 21.3747H89.0784C87.8677 24.8148 85.3885 26.9015 80.6031 26.9015C75.1834 26.9015 71.3205 23.1793 71.3205 17.5962C71.3205 12.2385 74.8375 8.40363 80.4877 8.40363C85.5614 8.40363 89.4244 11.6182 89.4244 17.2578C89.4244 17.5962 89.4244 17.9909 89.3667 18.8933ZM85.1578 15.9043C84.9272 13.3665 83.3705 11.9566 80.6031 11.9566C77.8932 11.9566 76.1059 13.4793 75.7023 15.9043H85.1578Z" fill="#808080"></path><path d="M55.9257 20.5287C55.2338 22.5026 53.9077 23.2921 51.9474 23.2921C48.6611 23.2921 47.2773 20.8107 47.2773 17.5962C47.2773 14.3816 48.8917 11.9566 52.0051 11.9566C53.9654 11.9566 55.2915 12.9717 55.9257 14.72H60.4805C59.4427 10.4903 56.214 8.40363 51.9474 8.40363C46.1819 8.40363 42.8955 12.4077 42.8955 17.5962C42.8955 23.2357 46.7584 26.9015 51.9474 26.9015C57.1364 26.9015 59.6156 24.0253 60.4805 20.5287H55.9257Z" fill="#808080"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M110.526 8.46002V26.8451H106.259V25.266C104.703 26.2811 102.858 26.9015 100.84 26.9015C95.5931 26.9015 91.3842 22.7846 91.3842 17.6525C91.3842 12.5205 95.5931 8.40363 100.84 8.40363C102.858 8.40363 104.703 9.02398 106.259 10.0391V8.46002H110.526ZM106.202 17.6525C106.202 14.72 103.78 12.3513 100.84 12.3513C97.8416 12.3513 95.4201 14.72 95.4201 17.6525C95.4201 20.5851 97.8416 22.8974 100.84 22.8974C103.78 22.8974 106.202 20.5851 106.202 17.6525Z" fill="#808080"></path></svg>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div class="nav-and-social">
+                <div class="main-nav-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Support</a>
+                    <a href="#">Mobile</a>
+                    <a href="#">Collections</a>
+                    <a href="#">Cleartrip for Business</a>
+                    <a href="#">Gift Cards</a>
+                </div>
+
+                <div class="social-connect">
+                  <div class="legal-info">
+                    <p>© 2025 Cleartrip Pvt. Ltd. - 
+                        <a href="#">Privacy</a> - 
+                        <a href="#">Terms of Use</a> - 
+                        <a href="#">Grievance Redressal</a>
+                    </p>
+                </div>
+                    <span>Connect <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.91001C5.87517 0.91001 0.91001 5.87517 0.91001 12C0.91001 18.1248 5.87517 23.09 12 23.09C18.1248 23.09 23.09 18.1248 23.09 12C23.09 5.87517 18.1248 0.91001 12 0.91001ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z" fill="#1A1A1A"></path><path d="M10.2467 18.9767H13.0556V11.9393H15.0152L15.2214 9.58544H13.0495V8.24469C13.0495 7.68655 13.1587 7.46815 13.6987 7.46815H15.2214V5.02325H13.274C11.181 5.02325 10.2406 5.9454 10.2406 7.70475V9.58544H8.77856V11.9697H10.2406V18.9767H10.2467Z" fill="#1A1A1A"></path></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.91001C5.87515 0.91001 0.91001 5.87515 0.91001 12C0.91001 18.1248 5.87515 23.09 12 23.09C18.1248 23.09 23.09 18.1248 23.09 12C23.09 5.87515 18.1248 0.91001 12 0.91001ZM0 12C0 5.37257 5.37257 0 12 0C18.6274 0 24 5.37257 24 12C24 18.6274 18.6274 24 12 24C5.37257 24 0 18.6274 0 12Z" fill="#1A1A1A"></path><path d="M12 6.81294C13.6926 6.81294 13.8928 6.81901 14.5602 6.84934C15.179 6.87967 15.5126 6.98281 15.7371 7.06774C16.0344 7.18301 16.2407 7.32255 16.4651 7.54095C16.6896 7.76542 16.8231 7.97169 16.9383 8.26896C17.0233 8.49342 17.1264 8.82709 17.1567 9.4459C17.1871 10.1132 17.1931 10.3134 17.1931 12.0061C17.1931 13.6987 17.1871 13.8989 17.1567 14.5662C17.1264 15.185 17.0233 15.5187 16.9383 15.7432C16.8231 16.0404 16.6835 16.2467 16.4651 16.4712C16.2467 16.6896 16.0344 16.8291 15.7371 16.9444C15.5126 17.0293 15.179 17.1325 14.5602 17.1628C13.8928 17.1931 13.6926 17.1992 12 17.1992C10.3074 17.1992 10.1072 17.1931 9.43984 17.1628C8.82103 17.1325 8.48736 17.0293 8.26289 16.9444C7.96562 16.8291 7.75936 16.6896 7.53489 16.4712C7.31042 16.2467 7.17695 16.0404 7.06168 15.7432C6.97675 15.5187 6.87361 15.185 6.84328 14.5662C6.81295 13.8989 6.80687 13.6987 6.80687 12.0061C6.80687 10.3134 6.81295 10.1132 6.84328 9.4459C6.87361 8.82709 6.97675 8.49342 7.06168 8.26896C7.17695 7.97169 7.31648 7.76542 7.53489 7.54095C7.75936 7.31648 7.96562 7.18301 8.26289 7.06774C8.48736 6.98281 8.82103 6.87967 9.43984 6.84934C10.1072 6.81901 10.3074 6.81294 12 6.81294ZM12 5.67239C10.2831 5.67239 10.0647 5.67846 9.39131 5.70879C8.7179 5.73913 8.25683 5.84833 7.85642 6.00606C7.43782 6.16987 7.08594 6.3822 6.73407 6.73407C6.3822 7.08594 6.1638 7.43781 6.00607 7.85642C5.84833 8.25682 5.7452 8.71789 5.71487 9.3913C5.68453 10.0647 5.67847 10.2831 5.67847 12C5.67847 13.7169 5.68453 13.9353 5.71487 14.6087C5.7452 15.2821 5.8544 15.7432 6.00607 16.1436C6.16987 16.5622 6.3822 16.9141 6.73407 17.2659C7.08594 17.6178 7.43782 17.8362 7.85642 17.9939C8.25683 18.1517 8.7179 18.2548 9.39131 18.2912C10.0647 18.3215 10.2831 18.3276 12 18.3276C13.7169 18.3276 13.9353 18.3215 14.6087 18.2912C15.2821 18.2609 15.7432 18.1517 16.1436 17.9939C16.5622 17.8301 16.9141 17.6178 17.2659 17.2659C17.6178 16.9141 17.8362 16.5622 17.9939 16.1436C18.1517 15.7432 18.2548 15.2821 18.2912 14.6087C18.3215 13.9353 18.3276 13.7169 18.3276 12C18.3276 10.2831 18.3215 10.0647 18.2912 9.3913C18.2609 8.71789 18.1517 8.25682 17.9939 7.85642C17.8301 7.43781 17.6178 7.08594 17.2659 6.73407C16.9141 6.3822 16.5622 6.1638 16.1436 6.00606C15.7432 5.84833 15.2821 5.74519 14.6087 5.70879C13.9353 5.67846 13.7169 5.67239 12 5.67239Z" fill="#1A1A1A"></path><path d="M12 8.74823C10.2042 8.74823 8.74823 10.2042 8.74823 12C8.74823 13.7958 10.2042 15.2518 12 15.2518C13.7958 15.2518 15.2518 13.7958 15.2518 12C15.2518 10.2042 13.7958 8.74823 12 8.74823ZM12 14.1112C10.8352 14.1112 9.88877 13.1648 9.88877 12C9.88877 10.8352 10.8352 9.88878 12 9.88878C13.1648 9.88878 14.1112 10.8352 14.1112 12C14.1112 13.1648 13.1648 14.1112 12 14.1112Z" fill="#1A1A1A"></path><path d="M16.1375 8.62083C16.1375 9.03943 15.7978 9.37917 15.3792 9.37917C14.9606 9.37917 14.6208 9.03943 14.6208 8.62083C14.6208 8.20222 14.9606 7.86249 15.3792 7.86249C15.7978 7.86249 16.1375 8.20222 16.1375 8.62083Z" fill="#1A1A1A"></path></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.91001C5.87515 0.91001 0.91001 5.87515 0.91001 12C0.91001 18.1248 5.87515 23.09 12 23.09C18.1248 23.09 23.09 18.1248 23.09 12C23.09 5.87515 18.1248 0.91001 12 0.91001ZM0 12C0 5.37257 5.37257 0 12 0C18.6274 0 24 5.37257 24 12C24 18.6274 18.6274 24 12 24C5.37257 24 0 18.6274 0 12Z" fill="#1A1A1A"></path><path d="M5.84833 15.8645C6.96461 16.5804 8.29322 16.999 9.7189 16.999C14.4024 16.999 17.0536 13.0435 16.8958 9.48837C17.3873 9.13043 17.818 8.68756 18.1577 8.18402C17.7027 8.38422 17.2174 8.51769 16.7078 8.57836C17.2295 8.26895 17.6299 7.77148 17.818 7.18301C17.3327 7.47421 16.7927 7.68048 16.2164 7.79575C15.7553 7.30434 15.1001 7.00101 14.3721 7.00101C12.7401 7.00101 11.545 8.52376 11.9151 10.1011C9.81597 9.99797 7.95955 8.9909 6.7098 7.46208C6.04853 8.59656 6.364 10.0829 7.49241 10.8352C7.07987 10.8231 6.6916 10.7078 6.3458 10.5197C6.32153 11.6906 7.15874 12.7826 8.37209 13.0253C8.01415 13.1223 7.62588 13.1466 7.23154 13.0677C7.55308 14.0688 8.48736 14.8028 9.5915 14.821C8.52982 15.6522 7.19514 16.0222 5.85439 15.8645H5.84833Z" fill="#1A1A1A"></path></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.91001C5.87517 0.91001 0.91001 5.87517 0.91001 12C0.91001 18.1248 5.87517 23.09 12 23.09C18.1248 23.09 23.09 18.1248 23.09 12C23.09 5.87517 18.1248 0.91001 12 0.91001ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z" fill="#1A1A1A"></path><path d="M9.1547 9.4277H6.7644V17.1446H9.1547V9.4277Z" fill="#1A1A1A"></path><path d="M7.94742 8.42064C8.73003 8.42064 9.36097 7.78363 9.36097 6.99496C9.36097 6.20628 8.73003 5.56927 7.94742 5.56927C7.16482 5.56927 6.53387 6.20628 6.53387 6.99496C6.53387 7.78363 7.16482 8.42064 7.94742 8.42064Z" fill="#1A1A1A"></path><path d="M12.9768 13.0981C12.9768 12.0121 13.4742 11.3691 14.4328 11.3691C15.3125 11.3691 15.7311 11.9879 15.7311 13.0981V17.1507H18.1092V12.2609C18.1092 10.1921 16.9383 9.1911 15.3003 9.1911C13.6623 9.1911 12.9768 10.4651 12.9768 10.4651V9.4277H10.6835V17.1446H12.9768V13.092V13.0981Z" fill="#1A1A1A"></path></svg>
+                    </span>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-section">
+            <h3>Product Offerings</h3>
+            <div>
+                <a href="#">Flight Booking</a>
+                <a href="#">International Flights</a>
+                <a href="#">Domestic Flights</a>
+                <a href="#">International Airlines</a>
+                <a href="#">Domestic Airlines</a>
+                <a href="#">ClearChoice Max</a>
+                <a href="#">ClearChoice Plus</a>
+                <a href="#">Cleartrip for Work</a>
+                <a href="#">Book Hotels</a>
+                <a href="#">Book Bus Tickets</a>
+                <a href="#">Holiday Packages</a>
+                <a href="#">Travel Guides</a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-section">
+            <h3>Popular Domestic Routes</h3>
+            <div>
+                <a href="#">Mumbai To Delhi Flights</a>
+                <a href="#">Delhi To Mumbai Flights</a>
+                <a href="#">Delhi To Goa Flights</a>
+                <a href="#">Bangalore To Delhi Flights</a>
+                <a href="#">Mumbai To Goa Flights</a>
+                <a href="#">Delhi To Bangalore Flights</a>
+                <a href="#">Pune To Delhi Flights</a>
+                <a href="#">Bangalore To Mumbai Flights</a>
+                <a href="#">Mumbai To Bangalore Flights</a>
+                <a href="#">Ahmedabad To Delhi Flights</a>
+                <a href="#">Hyderabad To Delhi Flights</a>
+                <a href="#">Delhi To Pune Flights</a>
+                <a href="#">Delhi To Srinagar Flights</a>
+                <a href="#">Bangalore To Goa Flights</a>
+                <a href="#">Chennai To Delhi Flights</a>
+                <a href="#">Kolkata To Delhi Flights</a>
+                <a href="#">Delhi To Ahmedabad Flights</a>
+                <a href="#">Delhi To Hyderabad Flights</a>
+                <a href="#">Delhi To Kolkata Flights</a>
+                <a href="#">Pune To Bangalore Flights</a>
+                <a href="#">Ahmedabad To Mumbai Flights</a>
+                <a href="#">Bangalore To Kolkata Flights</a>
+                <a href="#">Goa To Mumbai Flights</a>
+                <a href="#">Hyderabad To Goa Flights</a>
+                <a href="#">Kolkata To Bangalore Flights</a>
+                <a href="#">Mumbai To Kolkata Flights</a>
+                <a href="#">Mumbai To Varanasi Flights</a>
+                <a href="#">Delhi To Chennai Flights</a>
+                <a href="#">Delhi To Patna Flights</a>
+                <a href="#">Patna To Delhi Flights</a>
+                <a href="#">Pune To Goa Flights</a>
+                <a href="#">Ahmedabad To Goa Flights</a>
+                <a href="#">Bangalore To Hyderabad Flights</a>
+                <a href="#">Bangalore To Pune Flights</a>
+                <a href="#">Bangalore To Varanasi Flights</a>
+                <a href="#">Chennai To Mumbai Flights</a>
+                <a href="#">Goa To Delhi Flights</a>
+                <a href="#">Hyderabad To Bangalore Flights</a>
+                <a href="#">Hyderabad To Mumbai Flights</a>
+                <a href="#">Kolkata To Mumbai Flights</a>
+                <a href="#">Mumbai To Ahmedabad Flights</a>
+                <a href="#">Mumbai To Chennai Flights</a>
+                <a href="#">Mumbai To Jaipur Flights</a>
+                <a href="#">Mumbai To Lucknow Flights</a>
+                <a href="#">Delhi To Guwahati Flights</a>
+                <a href="#">Delhi To Leh Flights</a>
+            </div>
+            <h3>Popular International Flight Routes</h3>
+  <div>
+    <a href="#">Delhi To Dubai Flights</a>
+    <a href="#">Mumbai To Dubai Flights</a>
+    <a href="#">Delhi To Bali Flights</a>
+    <a href="#">Delhi To London Flights</a>
+    <a href="#">Mumbai To London Flights</a>
+    <a href="#">Delhi To Bangkok Flights</a>
+    <a href="#">Delhi To Kathmandu Flights</a>
+    <a href="#">Delhi To Singapore Flights</a>
+    <a href="#">Pune To Dubai Flights</a>
+    <a href="#">Mumbai To Bali Flights</a>
+    <a href="#">Mumbai To Bangkok Flights</a>
+    <a href="#">Mumbai To Singapore Flights</a>
+    <a href="#">Ahmedabad To Dubai Flights</a>
+    <a href="#">Bangalore To Dubai Flights</a>
+    <a href="#">Chennai To Dubai Flights</a>
+    <a href="#">Chennai To Singapore Flights</a>
+    <a href="#">Hyderabad To Dubai Flights</a>
+    <a href="#">Delhi To Toronto Flights</a>
+    <a href="#">Bangalore To Bali Flights</a>
+    <a href="#">Kolkata To Bangkok Flights</a>
+    <a href="#">Delhi To Almaty Flights</a>
+    <a href="#">Delhi To Phuket Flights</a>
+    <a href="#">Bangalore To Bangkok Flights</a>
+    <a href="#">Bangalore To Singapore Flights</a>
+    <a href="#">Bangkok To Phuket Flights</a>
+    <a href="#">Kolkata To Dubai Flights</a>
+    <a href="#">Delhi To Baku Flights</a>
+    <a href="#">Delhi To Hong Kong Flights</a>
+    <a href="#">Mumbai To New York Flights</a>
+    <a href="#">Delhi To Bhutan Flights</a>
+    <a href="#">Delhi To New York Flights</a>
+  </div>
+
+  <h3>Popular Domestic Airlines</h3>
+  <div>
+    <a href="#">Indigo</a>
+    <a href="#">Air India</a>
+    <a href="#">Air India Express</a>
+    <a href="#">Akasa Airlines</a>
+    <a href="#">Spicejet</a>
+    <a href="#">Alliance Air</a>
+  </div>
+
+  <h3>Popular International Airlines</h3>
+  <div>
+    <a href="#">Air Arabia Airlines</a>
+    <a href="#">Etihad Airways Airlines</a>
+    <a href="#">Malaysia Airlines</a>
+    <a href="#">Philippine Airlines</a>
+    <a href="#">Star Airlines</a>
+    <a href="#">Star Air Airlines</a>
+    <a href="#">American Airlines</a>
+    <a href="#">Air Asia Airlines</a>
+    <a href="#">Turkish Airlines</a>
+    <a href="#">Gulf Air Airlines</a>
+    <a href="#">United Airlines</a>
+    <a href="#">Srilankan Airlines</a>
+    <a href="#">Oman Air Airlines</a>
+    <a href="#">Saudia Airlines</a>
+    <a href="#">Delta Airlines</a>
+    <a href="#">Emirates Airlines</a>
+    <a href="#">Ethiopian Air Airlines</a>
+    <a href="#">Vietnam Airlines</a>
+    <a href="#">Vietjet Air Airlines</a>
+    <a href="#">Flydubai Airlines</a>
+    <a href="#">Japan Airlines</a>
+    <a href="#">Spirit Airlines</a>
+  </div>
+
+  <h3>Popular Airlines Routes</h3>
+  <div>
+    <a href="#">Indigo Delhi to Goa Flights</a>
+    <a href="#">Indigo Delhi to Dubai Flights</a>
+    <a href="#">Indigo Mumbai to Dubai Flights</a>
+    <a href="#">Indigo Delhi to Bangalore Flights</a>
+    <a href="#">Indigo Delhi to Mumbai Flights</a>
+    <a href="#">Indigo Mumbai to Delhi Flights</a>
+    <a href="#">Air India Delhi to Mumbai Flights</a>
+    <a href="#">Air India Mumbai to Goa Flights</a>
+    <a href="#">Air India Delhi to Goa Flights</a>
+    <a href="#">Air India Delhi to Dubai Flights</a>
+    <a href="#">Air India Delhi to Bangalore Flights</a>
+    <a href="#">Air India Express Mangalore to Dubai Flights</a>
+    <a href="#">Air India Express Trichy to Dubai Flights</a>
+    <a href="#">Air India Express Trichy to Sharjah Flights</a>
+    <a href="#">Akasa Air Delhi to Mumbai Flights</a>
+    <a href="#">Akasa Air Pune to Bangalore Flights</a>
+    <a href="#">Akasa Air Mumbai Bangalore Flights</a>
+    <a href="#">Spicejet Dubai to Madurai Flights</a>
+    <a href="#">Spicejet Pune to Dubai Flights</a>
+    <a href="#">Spicejet Delhi to Mumbai Flights</a>
+    <a href="#">Spicejet Delhi to Guwahati Flights</a>
+    <a href="#">Etihad Airways Mumbai to Abu Dhabi Flights</a>
+    <a href="#">Etihad Airways Delhi to Abu Dhabi Flights</a>
+    <a href="#">Etihad Airways Chennai to Abu Dhabi Flights</a>
+    <a href="#">Etihad Airways Bangalore to Abu Dhabi Flights</a>
+  </div>
+  <h3>New UDAN Sectors</h3>
+            <div>
+                <a href="#">Mumbai To Prayagraj Flights</a>
+                <a href="#">Bangalore To Prayagraj Flights</a>
+                <a href="#">Prayagraj To Mumbai Flights</a>
+                <a href="#">Mumbai To Darbhanga Flights</a>
+                <a href="#">Salem To Bangalore Flights</a>
+                <a href="#">Salem To Chennai Flights</a>
+                <a href="#">Mumbai To Kolhapur Flights</a>
+                <a href="#">Chennai To Salem Flights</a>
+                <a href="#">Darbhanga To Mumbai Flights</a>
+                <a href="#">Kolkata To Shillong Flights</a>
+                <a href="#">Kolhapur To Mumbai Flights</a>
+                <a href="#">Bangalore To Agra Flights</a>
+                <a href="#">Guwahati To Shillong Flights</a>
+            </div>
+            <h3>Popular Flights from India to International Destinations</h3>
+            <div>
+                <a href="#">India to Australia Flights</a>
+                <a href="#">India to Laos Flights</a>
+                <a href="#">India to China Flights</a>
+                <a href="#">India to New Zealand Flights</a>
+                <a href="#">India to Canada Flights</a>
+            </div>
+            <h3>Offers</h3>
+            <div>
+                <a href="#">Flights Offers</a>
+                <a href="#">Hotels Offers</a>
+                <a href="#">Bus Offers</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Special Offers</a>
+            </div>
+            <h3>Popular Hotels</h3>
+            <div>
+                <a href="#">Hotels in Goa</a>
+                <a href="#">Hotels in Mumbai</a>
+                <a href="#">Hotels in Bengaluru</a>
+                <a href="#">Hotels in Chennai</a>
+                <a href="#">Hotels in Jaipur</a>
+                <a href="#">Hotels in Manali</a>
+                <a href="#">Hotels in Shimla</a>
+                <a href="#">Hotels in Pune</a>
+                <a href="#">Hotels in Hyderabad</a>
+                <a href="#">Hotels in Mahabaleshwar</a>
+                <a href="#">Hotels in Ooty</a>
+                <a href="#">Hotels in Kolkata</a>
+                <a href="#">Hotels in Shirdi</a>
+                <a href="#">Hotels in Delhi</a>
+                <a href="#">Hotels in Mysore</a>
+                <a href="#">Hotels in Munnar</a>
+                <a href="#">Hotels in Kodaikanal</a>
+                <a href="#">Hotels in Ahmedabad</a>
+                <a href="#">Hotels in Varanasi</a>
+                <a href="#">Hotels in Chandigarh</a>
+                <a href="#">Hotels in Lucknow</a>
+                <a href="#">Hotels in Gurgaon</a>
+                <a href="#">Hotels in Indore</a>
+                <a href="#">Hotels in Noida</a>
+                <a href="#">Hotels in Kochi</a>
+                <a href="#">Hotels in Udaipur</a>
+                <a href="#">Hotels in Navi Mumbai</a>
+                <a href="#">Hotels in Mussoorie</a>
+                <a href="#">Hotels in Nashik</a>
+                <a href="#">Hotels in Pondicherry</a>
+                <a href="#">Hotels in Amritsar</a>
+                <a href="#">Hotels in Dehradun</a>
+                <a href="#">Hotels in Coimbatore</a>
+                <a href="#">Hotels in Visakhapatnam</a>
+                <a href="#">Hotels in Bhubaneswar</a>
+                <a href="#">Hotels in Wayanad</a>
+                <a href="#">Hotels in Agra</a>
+                <a href="#">Hotels in Nainital</a>
+            </div>
+            <h3>Top Hotels</h3>
+            <div>
+                <a href="#">The Park Chennai</a>
+                <a href="#">The Park Hyderabad</a>
+                <a href="#">The Park Bengaluru</a>
+                <a href="#">Country Inn & Suites By Radisson, Sahibabad</a>
+                <a href="#">The Park New Delhi</a>
+                <a href="#">The Golden Palms Hotel & Spa</a>
+                <a href="#">Hotel Hindustan International Bhubaneswar</a>
+                <a href="#">Four Point by Sheraton Pune</a>
+                <a href="#">Hyatt Centric, Janakpuri New Delhi</a>
+                <a href="#">The Park Classic</a>
+                <a href="#">Hotel Panchavati, Yatri</a>
+                <a href="#">The Park Kolkata</a>
+                <a href="#">Zone By The Park Kolkata</a>
+                <a href="#">Welcomhotel by ITC Hotels, Dwarka</a>
+                <a href="#">Park Ascent</a>
+                <a href="#">The Forest Club Resort</a>
+                <a href="#">Lemon Tree Premier, Mumbai International Airport</a>
+                <a href="#">Roseate House</a>
+                <a href="#">Ramada by Wyndham Chennai Egmore</a>
+                <a href="#">Ramada Plaza, Chandigarh, Zirakpur</a>
+                <a href="#">Sahara Star</a>
+                <a href="#">Blue Leaf by Papaya Tree Hotels</a>
+                <a href="#">Hotel Tip Top International</a>
+                <a href="#">The Chancery Pavillion</a>
+                <a href="#">De sovrain</a>
+                <a href="#">Hotel Milan International</a>
+                <a href="#">Grand Estancia</a>
+                <a href="#">Hotel Scarlet</a>
+                <a href="#">Leisure Inn Grand Chanakya</a>
+                <a href="#">The Suryaa New Delhi</a>
+                <a href="#">The Fern Residency, Jaipur</a>
+                <a href="#">Palm Meadows Resort</a>
+                <a href="#">Seven Seas Hotel</a>
+                <a href="#">Clarks Amer</a>
+                <a href="#">Hotel Mountview</a>
+                <a href="#">Radisson Blu Jaipur</a>
+                <a href="#">Hotel Metrovista</a>
+                <a href="#">Upar Hotels - Nungambakkam</a>
+                <a href="#">Old Goa Residency (Goa Tourism)</a>
+                <a href="#">Golden Tulip Suites Gurgaon</a>
+                <a href="#">Connaught Royale Delhi</a>
+                <a href="#">Purple Palms Resort & Spa</a>
+                <a href="#">Treatotel Hotel</a>
+                <a href="#">Aasuris</a>
+            </div>
+  </div>
+  </footer>
+  </body>
+  </html>
